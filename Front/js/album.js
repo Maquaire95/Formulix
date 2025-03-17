@@ -1,11 +1,10 @@
-function openLightbox(imgSrc) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    lightboxImg.src = imgSrc;
-    lightbox.classList.add('active');
-}
+document.querySelectorAll('.photo-card img').forEach(img => {
+    img.addEventListener('click', function () {
+        document.getElementById('fullscreen-img').src = this.src;
+        document.getElementById('fullscreen').style.display = 'flex';
+    });
+});
 
-function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('active');
-}
+document.getElementById('fullscreen').addEventListener('click', function () {
+    this.style.display = 'none';
+});

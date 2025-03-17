@@ -85,3 +85,23 @@ body {
     font-size: 1rem;
     color: #333;
 }
+
+/* Style pour l'effet de zoom */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    display: none;
+}
+.fullscreen img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+}
