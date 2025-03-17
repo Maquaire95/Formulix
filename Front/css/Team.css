@@ -1,0 +1,119 @@
+/* Barre de navigation */
+.navbar {
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #000;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dfdfdf;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 20px auto; /* Ajout d'une marge en haut pour éviter le chevauchement avec la navbar */
+}
+
+/* Titre principal */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Grille pour les bulles */
+.news-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style des bulles */
+.news-bubble {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Titre et écurie */
+.news-header {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Texte d'actualité */
+.news-description {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.view-more {
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Image */
+.news-image {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Date et icônes en bas */
+.news-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 15px;
+}
