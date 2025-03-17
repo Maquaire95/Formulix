@@ -1,3 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, rgb(15, 0, 148), rgb(255, 255, 255));
+    }
+    50% {
+        background: linear-gradient(45deg, rgb(122, 0, 0), rgba(255, 255, 255, 0.959));
+    }
+    100% {
+        background: linear-gradient(45deg, rgb(255, 255, 255), rgb(26, 102, 7));
+    }
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 500px;
+    margin-top: 80px; /* Assurez-vous qu'il y a assez d'espace en haut pour la barre de navigation */
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex: 1;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    display: flex;
+    gap: 8px;
+    padding: 20px;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease-in-out;
+    height: 400px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 5px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    margin: 10px 0 0;
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
+.scroll-btn:hover {
+    background: rgba(37, 76, 162, 0.9);
+}
+
 /* Barre de navigation */
 .navbar {
     background: linear-gradient(to right, #ffffff, #ffffff);
@@ -37,83 +157,4 @@
     color: #000;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
-}
-
-/* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #dfdfdf;
-    margin: 0;
-    padding: 0;
-}
-
-/* Conteneur principal */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 80px auto 20px auto; /* Ajout d'une marge en haut pour éviter le chevauchement avec la navbar */
-}
-
-/* Titre principal */
-h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Grille pour les bulles */
-.news-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Style des bulles */
-.news-bubble {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 100%;
-    max-width: 350px;
-    padding: 20px;
-    overflow: hidden;
-}
-
-/* Titre et écurie */
-.news-header {
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Texte d'actualité */
-.news-description {
-    color: #666;
-    font-size: 0.95em;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.view-more {
-    color: #1e90ff;
-    text-decoration: none;
-    font-size: 0.9em;
-}
-
-/* Image */
-.news-image {
-    width: 100%;
-    margin-top: 10px;
-    border-radius: 5px;
-}
-
-/* Date et icônes en bas */
-.news-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8em;
-    color: #888;
-    margin-top: 15px;
 }
