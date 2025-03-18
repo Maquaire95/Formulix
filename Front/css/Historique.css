@@ -1,0 +1,185 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding-top: 60px;
+    background: linear-gradient(to bottom, #8B0000, #400000);
+    color: white;
+    text-align: center;
+}
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url('ferrari-banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+.section h2 {
+    color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+}
+.table-container {
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.table th, .table td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+}
+.table th {
+    background: darkred;
+}
+/* Style de la navbar */
+.navbar {
+    background: white;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+/* Pour éviter que le menu recouvre le reste de la page */
+body {
+    padding-top: 60px; /* Ajuste la hauteur pour ne pas cacher le haut de la page */
+}
+
+/* Style pour le menu déroulant */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.navbar ul li {
+    position: relative; /* Permet de positionner le sous-menu */
+}
+
+/* Style des liens dans la navbar */
+.navbar a {
+    color: black; /* Texte noir */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold; /* Texte en gras */
+    padding: 10px 15px; /* Espace autour du texte */
+    transition: color 0.3s ease-in-out; /* Animation fluide du changement de couleur */
+}
+
+/* Effet au survol */
+.navbar a:hover {
+    color: #ff0000; /* Change la couleur au survol (exemple rouge, tu peux changer) */
+}
+
+/* Style du menu déroulant */
+.navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 150px;
+    padding: 10px;
+    z-index: 100;
+}
+
+/* Affichage du menu déroulant au survol */
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Optionnel : Style des liens dans le sous-menu */
+.navbar ul li .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.navbar ul li .dropdown-content a:hover {
+    background: lightgray;
+}
+
+/* Styles spécifiques pour Ferrari */
+body {
+    background: linear-gradient(to bottom, #8B0000, #400000);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background: url('ferrari-banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.section h2 {
+    color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th {
+    background: darkred;
+}
