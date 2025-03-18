@@ -6,20 +6,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    
     animation: gradientAnimation 5s ease infinite;
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background: linear-gradient(45deg, rgb(15, 0, 148), rgb(255, 255, 255));
-    }
-    50% {
-        background: linear-gradient(45deg, rgb(122, 0, 0), rgba(255, 255, 255, 0.959));
-    }
-    100% {
-        background: linear-gradient(45deg, rgb(255, 255, 255), rgb(26, 102, 7));
-    }
+    0% { background: linear-gradient(45deg, rgb(15, 0, 148), rgb(255, 255, 255)); }
+    50% { background: linear-gradient(45deg, rgb(122, 0, 0), rgba(255, 255, 255, 0.959)); }
+    100% { background: linear-gradient(45deg, rgb(255, 255, 255), rgb(26, 102, 7)); }
 }
 
 .carousel-wrapper {
@@ -31,7 +24,7 @@ body {
     align-items: center;
     gap: 10px;
     height: 500px;
-    margin-top: 80px; /* Assurez-vous qu'il y a assez d'espace en haut pour la barre de navigation */
+    margin-top: 80px;
 }
 
 .carousel-container {
@@ -44,9 +37,7 @@ body {
     flex: 1;
 }
 
-.carousel-container::-webkit-scrollbar {
-    display: none;
-}
+.carousel-container::-webkit-scrollbar { display: none; }
 
 .carousel {
     display: flex;
@@ -66,9 +57,7 @@ body {
     height: 400px;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
+.card:hover { transform: scale(1.05); }
 
 .card img {
     width: 100%;
@@ -106,21 +95,14 @@ body {
     z-index: 10;
 }
 
-.scroll-btn.left {
-    left: 10px;
-}
+.scroll-btn.left { left: 10px; }
+.scroll-btn.right { right: 10px; }
 
-.scroll-btn.right {
-    right: 10px;
-}
+.scroll-btn:hover { background: rgba(37, 76, 162, 0.9); }
 
-.scroll-btn:hover {
-    background: rgba(37, 76, 162, 0.9);
-}
-
-/* Barre de navigation */
+/* Style de la navbar */
 .navbar {
-    background: linear-gradient(to right, #ffffff, #ffffff);
+    background: white;
     padding: 15px 0;
     text-align: center;
     width: 100%;
@@ -128,8 +110,16 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
 }
 
+/* Pour éviter que le menu recouvre le reste de la page */
+body {
+    padding-top: 60px; /* Ajuste la hauteur pour ne pas cacher le haut de la page */
+}
+
+/* Style pour le menu déroulant */
 .navbar ul {
     list-style: none;
     padding: 0;
@@ -137,24 +127,55 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: relative;
 }
 
 .navbar ul li {
-    display: inline;
+    position: relative; /* Permet de positionner le sous-menu */
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 15px;
-    transition: 0.3s;
+/* Style des liens dans la navbar */
+.navbar a {
+    color: black; /* Texte noir */
+    text-decoration: none; /* Supprime le soulignement */
+    font-weight: bold; /* Texte en gras */
+    padding: 10px 15px; /* Espace autour du texte */
+    transition: color 0.3s ease-in-out; /* Animation fluide du changement de couleur */
 }
 
-.navbar ul li a:hover,
-.navbar ul li a.active {
-    color: #000;
-    background: rgba(255, 255, 255, 0.3);
+/* Effet au survol */
+.navbar a:hover {
+    color: #ff0000; /* Change la couleur au survol (exemple rouge, tu peux changer) */
+}
+
+/* Style du menu déroulant */
+.navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    min-width: 150px;
+    padding: 10px;
+    z-index: 100;
+}
+
+/* Affichage du menu déroulant au survol */
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Optionnel : Style des liens dans le sous-menu */
+.navbar ul li .dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.navbar ul li .dropdown-content a:hover {
+    background: lightgray;
 }
