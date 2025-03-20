@@ -7,28 +7,6 @@ body {
     text-align: center;
 }
 
-/* Style de la bannière */
-.banner {
-    width: 100%;
-    height: 300px;
-    background: url('../images/ferrari-banner.jpg') no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Conteneur des sections */
-.section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-}
 
 /* Titres */
 .section h2 {
