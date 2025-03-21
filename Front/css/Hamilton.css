@@ -91,7 +91,7 @@ body {
 }
 @keyframes bg-animation {
     0% { background: linear-gradient(135deg, #aa5ff0, #000000); }
-    100% { background: linear-gradient(135deg, #bd4c5f, #a18488); }
+    100% { background: linear-gradient(135deg, #9e2337, #a18488); }
 }
 .container {
     background: white;
