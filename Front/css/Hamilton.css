@@ -90,8 +90,8 @@ body {
     animation: bg-animation 10s infinite alternate ease-in-out;
 }
 @keyframes bg-animation {
-    0% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
-    100% { background: linear-gradient(135deg, #ff758c, #ffb6c1); }
+    0% { background: linear-gradient(135deg, #aa5ff0, #000000); }
+    100% { background: linear-gradient(135deg, #bd4c5f, #a18488); }
 }
 .container {
     background: white;
@@ -113,6 +113,18 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 h1 {
     color: #333;
