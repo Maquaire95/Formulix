@@ -14,26 +14,38 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
     transition: opacity 1s ease-in-out;
     scroll-snap-align: start;
     position: relative;
+    text-align: center;
+}
+.section img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+.stats {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 10px;
 }
 /* Ajout des couleurs officielles des équipes */
 .ferrari { background: #dc0000; }
-.redbull { background: #1e41ff; }
+.redbull { background: #03115e; }
 .mercedes { background: #00d2be; }
 .mclaren { background: #ff8700; }
 .astonmartin { background: #006f62; }
 .alpine { background: #0090ff; }
 .haas { background: #ffffff; color: black; }
 .williams { background: #005aff; }
-.alfaromeo { background: #900000; }
-.alphatauri { background: #49497d; }
+.alfaromeo { background: #07db00; }
+.alphatauri { background: #3392be; }
 
 /* 🌟 NAVBAR */
 .navbar {
