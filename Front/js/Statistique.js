@@ -1,19 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll(".team");
-    
-    function reveal() {
-        sections.forEach((section) => {
-            let windowHeight = window.innerHeight;
-            let sectionTop = section.getBoundingClientRect().top;
-            let revealPoint = 150;
-            
-            if (sectionTop < windowHeight - revealPoint) {
-                section.style.opacity = "1";
-                section.style.transform = "translateY(0)";
-            }
-        });
-    }
-    
-    window.addEventListener("scroll", reveal);
-    reveal(); // Pour afficher la première section immédiatement
+const sections = document.querySelectorAll('.section');
+let options = {
+    root: null,
+    threshold: 0.5,
+};
+
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+        } else {
+            entry.target.style.opacity = '0';
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    section.style.opacity = '0';
+    observer.observe(section);
 });

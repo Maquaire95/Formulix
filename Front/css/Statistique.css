@@ -1,37 +1,39 @@
 body {
-    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding-top: 60px;
-    background: linear-gradient(to bottom, #8B0000, #400000);
-    color: white;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
 }
-
-
-/* Titres */
-.section h2 {
-    color: gold;
-    border-bottom: 2px solid gold;
-    padding-bottom: 10px;
-}
-
-/* Tableaux */
-.table-container {
-    overflow-x: auto;
-}
-.table {
+.container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
 }
-.table th, .table td {
-    border: 1px solid white;
-    padding: 10px;
-    text-align: left;
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    transition: opacity 1s ease-in-out;
+    scroll-snap-align: start;
+    position: relative;
 }
-.table th {
-    background: darkred;
-}
+/* Ajout des couleurs officielles des équipes */
+.ferrari { background: #dc0000; }
+.redbull { background: #1e41ff; }
+.mercedes { background: #00d2be; }
+.mclaren { background: #ff8700; }
+.astonmartin { background: #006f62; }
+.alpine { background: #0090ff; }
+.haas { background: #ffffff; color: black; }
+.williams { background: #005aff; }
+.alfaromeo { background: #900000; }
+.alphatauri { background: #49497d; }
 
 /* 🌟 NAVBAR */
 .navbar {
@@ -65,7 +67,7 @@ body {
     transition: color 0.3s ease-in-out;
 }
 .navbar a:hover {
-    color: #ff0000;
+    color: #816e6e;
 }
 
 /* Menu déroulant */
@@ -92,64 +94,4 @@ body {
 }
 .navbar ul li .dropdown-content a:hover {
     background: lightgray;
-}
-
-/* 🌟 SECTIONS PAR ÉCURIE */
-.team {
-    padding: 50px 0;
-    text-align: center;
-}
-
-/* Style des bannières */
-.team .banner {
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-}
-
-/* Mise en page des équipes */
-.team-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-}
-.team-image {
-    width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-.team-info {
-    max-width: 600px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* 🌟 STYLES SPÉCIFIQUES PAR ÉCURIE */
-.mercedes .banner {
-    background: url('../images/mercedes-banner.jpg') no-repeat center/cover;
-}
-.redbull .banner {
-    background: url('../images/redbull-banner.jpg') no-repeat center/cover;
-}
-
-.mercedes {
-    background: linear-gradient(to bottom, #00A19C, #005C5A);
-}
-.redbull {
-    background: linear-gradient(to bottom, #1E1E1E, #FF0000);
-}
-
-/* 🌟 Effet dynamique au scroll */
-.team {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
 }
