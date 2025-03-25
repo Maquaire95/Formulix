@@ -37,17 +37,17 @@ body {
 }
 /* Ajout des couleurs officielles des équipes */
 .ferrari { background: #dc0000; }
-.redbull { background: #03115e; }
+.redbull { background: #1e41ff; }
 .mercedes { background: #00d2be; }
 .mclaren { background: #ff8700; }
 .astonmartin { background: #006f62; }
 .alpine { background: #0090ff; }
 .haas { background: #ffffff; color: black; }
 .williams { background: #005aff; }
-.alfaromeo { background: #07db00; }
-.alphatauri { background: #3392be; }
+.alfaromeo { background: #900000; }
+.alphatauri { background: #49497d; }
 
-/* 🌟 NAVBAR */
+/*NAVBAR */
 .navbar {
     background: white;
     padding: 15px 0;
@@ -60,6 +60,7 @@ body {
     display: flex;
     justify-content: center;
 }
+
 .navbar ul {
     list-style: none;
     padding: 0;
@@ -68,9 +69,11 @@ body {
     justify-content: center;
     gap: 20px;
 }
+
 .navbar ul li {
     position: relative;
 }
+
 .navbar a {
     color: black;
     text-decoration: none;
@@ -78,6 +81,7 @@ body {
     padding: 10px 15px;
     transition: color 0.3s ease-in-out;
 }
+
 .navbar a:hover {
     color: #816e6e;
 }
@@ -95,15 +99,18 @@ body {
     padding: 10px;
     z-index: 100;
 }
+
 .navbar ul li:hover .dropdown-content {
     display: block;
 }
+
 .navbar ul li .dropdown-content a {
     display: block;
     padding: 8px 12px;
     color: black;
     text-decoration: none;
 }
+
 .navbar ul li .dropdown-content a:hover {
     background: lightgray;
 }
