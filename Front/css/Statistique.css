@@ -36,16 +36,16 @@ body {
     margin-top: 10px;
 }
 /* Ajout des couleurs officielles des équipes */
-.ferrari { background: #dc0000; }
-.redbull { background: #1e41ff; }
+.ferrari { background: #bb0000; }
+.redbull { background: #061987; }
 .mercedes { background: #00d2be; }
 .mclaren { background: #ff8700; }
 .astonmartin { background: #006f62; }
 .alpine { background: #0090ff; }
-.haas { background: #ffffff; color: black; }
-.williams { background: #005aff; }
-.alfaromeo { background: #900000; }
-.alphatauri { background: #49497d; }
+.haas { background: #000000; color: rgb(255, 255, 255); }
+.williams { background: #0d4ec5; }
+.alfaromeo { background: #00ff0d; }
+.alphatauri { background: #0ecad8; }
 
 /*NAVBAR */
 .navbar {
