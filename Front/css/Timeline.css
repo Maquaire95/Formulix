@@ -1,3 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.event {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.event:hover {
+    transform: scale(1.05);
+}
+
+.year {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff1e00;
+}
+
+.description {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
 /* Style de la navbar */
 .navbar {
     background: white;
