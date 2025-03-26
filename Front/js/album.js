@@ -1,27 +1,3 @@
-document.querySelectorAll('.photo-card img').forEach(img => {
-    img.addEventListener('click', function () {
-        document.getElementById('fullscreen-img').src = this.src;
-        document.getElementById('fullscreen').style.display = 'flex';
-    });
-});
-
-document.getElementById('fullscreen').addEventListener('click', function () {
-    this.style.display = 'none';
-});
-
-
-// Fonction de défilement du carrousel
-function scrollCarousel(direction) {
-    const container = document.querySelector(".carousel-container");
-    if (!container) return;
-    
-    const card = document.querySelector(".card");
-    if (!card) return;
-    
-    const cardWidth = card.offsetWidth + 16; // Largeur + marge
-    container.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
-}
-
 document.addEventListener("DOMContentLoaded", function () {
     const dropdown = document.querySelector(".dropdown");
     if (!dropdown) return; // Vérifie si le menu déroulant existe avant d'ajouter les événements
